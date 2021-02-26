@@ -1,0 +1,555 @@
+/* ---- Custom Font---- */
+@font-face {
+	font-family: 'Georgia';
+	src: url('../vendors/font/Georgia Regular font.ttf')
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url('../vendors/font/verdana.ttf')
+}
+
+/* ---- General Css---- */
+body {
+	font-family: 'Verdana';
+	background: #5b3a27;
+	color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Georgia';
+}
+
+ul {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* ---- Navigation Css---- */
+.mainNav {
+	background: rgba(91, 58, 39, 0.7);
+	padding: 30px 0;
+	transition: all .5s ease-in-out;
+}
+
+.navbar-reduce {
+	transition: all .5s ease-in-out;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: rgba(108, 117, 125, 0.7);
+}
+
+.logo h2 {
+	margin-bottom: 0;
+}
+
+.logo h2 a {
+	color: #fff;
+	font-size: 36px;
+}
+
+.logo p {
+	font-family: 'Georgia';
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.custom-menu li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.custom-menu li:first-child {
+	margin-left: 0;
+}
+
+.custom-menu li a {
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px 20px;
+	background: #8f5f26;
+	transition: all .3s ease-in-out;
+	border-radius: 50px;
+}
+
+.custom-menu li a:hover,
+.custom-menu li a.active {
+	background: #ff9900;
+}
+
+/* ---- Hamburger menu Css---- */
+.mobile-menu {
+	position: absolute;
+	background-color: rgba(71, 71, 71, 0.9);
+	top: 0;
+	left: -280px;
+	height: 100vh;
+	width: 280px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .5s ease-in-out;
+}
+
+.toggle {
+	left: 0;
+	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+	transition: all .5s ease-in-out;
+}
+
+.toggle-menu {
+	background-color: none;
+	position: fixed;
+	top: 30px;
+	right: 25px;
+	width: 35px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2px 2px 2px 3px;
+	border-radius: 5px;
+	cursor: pointer;	
+	transition: all .5s ease-in-out;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: transform 0.3s ease-in-out;		
+}
+
+.toggle .line1 {
+	background-color: #fff;
+	transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+}
+
+.toggle .line2 {
+	display: none;	
+}
+
+.toggle .line3 {
+	background-color: #fff;
+	transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+}
+
+.toggle .toggle-menu {
+	background-color: none;
+}
+
+.mobile-menu li {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.mobile-menu li a {
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px 20px;
+	background: #8f5f26;
+	transition: all .3s ease-in-out;
+	border-radius: 50px;
+}
+
+.mobile-menu li a:hover,
+.mobile-menu li a.active {
+	background: #ff9900;
+}
+
+/* ---- Header Home Thumb Nav Gallery Css---- */
+.header {
+	padding: 12rem 0 5rem 0;
+	background: #5b3a27;
+}
+
+.header .controls .prev-button,
+.header .controls .next-button {
+	background: rgba(91, 58, 39, 0.3);
+	padding: 0;
+}
+
+.header .controls .prev-button.inactive svg,
+.header .controls .next-button.inactive svg {
+	fill: rgba(164, 100, 97, 0.5);
+}
+
+.header .controls svg {
+	fill: #fff;
+	width: 30px;
+	padding: 5px;
+}
+
+.header .thmb-wrap {
+	margin-top: 30px;
+}
+
+.header .large-image {
+	border: 3px solid #fff;
+}
+
+.booking-detail {
+	border: 1px solid #a46461;
+}
+
+.booking-detail h3 {
+	font-size: 22px;
+	color: #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 3px 0;
+	margin-bottom: 20px;
+}
+
+.booking-detail label {
+	font-size: 13px;
+	text-transform: capitalize;
+}
+
+.booking-detail .form-group {
+	margin-bottom: 12px;
+}
+
+.booking-detail .form-control {
+	background: #20130b;
+	border-color: #a46461;
+	border-radius: 0;
+	font-size: 14px;
+	color: #fff;
+}
+
+.booking-detail .form-control:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+.booking-detail .input-btn {
+	display: block;
+	width: 100%;
+	border: 1px solid #20130b;
+	background: #a46461;
+	padding: 7px;
+	margin-top: 10px;
+	font-size: 13px;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+.booking-detail .input-btn:hover {
+	background: #8f5f26;
+	border-color: #ccc;
+}
+
+.booking-detail .pdf-file {
+	display: flex;
+	align-items: center;
+	background: #e9e9c0;
+	padding: 3px 8px;
+	border: 1px solid #a46461;
+	margin-bottom: 15px;
+}
+
+.pdf-file img {
+	width: auto;
+	height: 65px;
+}
+
+.pdf-file p {
+	color: #a46461;
+	font-size: 11px;
+	margin-bottom: 0;
+	padding: 10px 15px;
+	text-align: center;
+}
+
+.pdf-file a {
+	color: #a46461;
+}
+
+.pdf-file a:hover {
+	text-decoration: underline;
+}
+
+/* ---- Blog Section Css---- */
+.blog {
+	background: #46291c;
+	padding: 5rem 0;
+}
+
+.blog h2 {
+	font-size: 30px;
+	color: #ccc;
+	border-bottom: 1px solid #5b3a27;
+	padding-bottom: 3px;
+	margin-bottom: 30px;
+}
+
+.custom-card {
+	background: #e9e9c0;
+	padding: 20px 30px;
+}
+
+.blog-content h4 {
+	font-size: 20px;
+	color: #666;
+	border-bottom: 1px solid #46291c;
+	padding-bottom: 7px;
+	margin-bottom: 20px;
+}
+
+.custom-card img {
+	padding: 5px;
+	border: 1px solid #a46661;
+	height: 150px;
+	width: 100%;
+}
+
+.custom-card p {
+	font-size: 12px;
+	color: #2e271d;
+	line-height: 1.8;
+	margin: 15px 0 10px 0;
+}
+
+.custom-card a {
+	font-size: 13px;
+	color: #a46461;
+	text-align: right;
+	display: block;
+}
+
+.custom-card a:hover {
+	text-decoration: underline;
+}
+
+.non-border-card img {
+	width: 100%;
+	height: 150px;
+	border: 3px solid #fff;
+}
+
+.non-border-card h6 {
+	font-size: 13px;
+	color: #fff;
+	border-bottom: 1px solid #5b3a27;
+	padding-bottom: 3px;
+	margin: 25px 0 12px 0;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.non-border-card p {
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.8;
+	margin-bottom: 8px;
+}
+
+.non-border-card a {
+	font-size: 13px;
+	color: #99cc00;
+	display: block;
+	text-align: right;
+}
+
+.non-border-card a:hover {
+	text-decoration: underline;
+}
+
+.wrapper-card p {
+	font-size: 12px;
+	color: #ccc;
+}
+
+.wrapper-card a {
+	color: #99cc00;
+}
+
+.media-img {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #5b3a27;
+	padding-bottom: 8px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.media-img img {
+	width: 64px;
+	height: 64px;
+	border: 2px solid #fff;
+}
+
+.media-img h4 {
+	font-size: 20px;
+	color: #ccc;
+	padding-left: 20px;
+}
+
+.blog-details p {
+	font-size: 12px;
+	color: #ccc;
+	line-height: 1.7;
+	margin-bottom: 8px;
+}
+
+.blog-details a {
+	display: block;
+	text-align: right;
+	font-size: 13px;
+	color: #99cc00;
+}
+
+.blog-details a:hover {
+	text-decoration: underline;
+}
+
+.detail-two h6 {
+	font-size: 13px;
+	color: #ccc;
+	border-bottom: 1px solid #5b3a27;
+	padding-bottom: 3px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.detail-two ul {
+	list-style: square;
+	margin-top: 15px;
+}
+
+.detail-two ul li {
+	font-size: 12px;
+	color: #ccc;
+	margin-top: 6px;
+}
+
+.flicker-link h5 {
+	font-size: 14px;
+	color: #ccc;
+	border-bottom: 1px solid #5b3a27;
+	padding-bottom: 3px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+.flicker-link a {
+	display: inline-block;
+}
+
+.flicker-link img {
+	width: 90px;
+	height: 90px;
+}
+
+/* ---- Footer Section Css---- */
+.footer {
+	padding: 3rem 0;
+	background: #20130b;
+}
+
+.footer h3 {
+	font-size: 22px;
+	color: #ccc;
+	border-bottom: 1px solid #46291c;
+	padding-bottom: 7px;
+	margin-bottom: 25px;
+}
+
+.footer p {
+	font-size: 12px;
+	color: #ccc;
+}
+
+.footer a {
+	font-size: 12px;
+	color: #fff;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.footer .form-control {
+	background: #5b3a27;
+	border-color: #5b3a27;
+	border-radius: 0;
+	font-size: 14px;
+	color: #fff;
+	width: 100%;
+}
+
+.footer .form-control:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+.footer .ftr-btn {
+	background: #5b3a27;
+	border: 0;
+	padding: 7px 15px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	transition: all .3s ease-in-out;
+}
+
+.footer .ftr-btn:hover {
+	background: #a46461;
+}
+
+.footer ul li {
+	font-size: 12px;
+	color: #ccc;
+	margin-bottom: 10px;
+}
+
+.social-link {
+	margin-top: -15px;
+	margin-bottom: 45px;
+}
+
+.social-link a {
+	color: #fff;
+	font-size: 13px;
+	width: 25px;
+	height: 25px;
+	line-height: 1.7;
+	display: inline-block;
+	border: 1px solid #8f5f26;
+	text-align: center;
+	background: transparent;
+	margin-right: 10px;
+	transition: all .3s ease;
+}
+
+.social-link a:last-child {
+	margin-right: 0;
+}
+
+.social-link a:hover {
+	color: #ff9900;
+}
+
+.main-footer {
+	margin-top: 30px;
+	background: #311d11;
+	padding: 15px 10px;
+}
+
+
+
+
+
+
